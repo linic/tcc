@@ -1,0 +1,20 @@
+--- texinfo-7.1.1-original/configure	2024-09-07 13:33:21.000000000 -0400
++++ texinfo-7.1.1-2/configure	2025-05-02 20:30:05.996818437 -0400
+@@ -38653,7 +38653,7 @@
+ # rather ncurses.  So we check for it.
+ TERMLIBS=
+ # Check for termlib before termcap because Solaris termcap needs libucb.
+-TERMLIB_VARIANTS="tinfo ncurses curses termlib termcap terminfo"
++TERMLIB_VARIANTS="tinfo ncursesw curses termlib termcap terminfo"
+ for termlib in ${TERMLIB_VARIANTS}; do
+   as_ac_Lib=`printf "%s\n" "ac_cv_lib_${termlib}""_tgetent" | $as_tr_sh`
+ { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for tgetent in -l${termlib}" >&5
+@@ -38730,7 +38730,7 @@
+ main (void)
+ {
+ #ifdef HAVE_NCURSES_TERMCAP_H
+-#include <ncurses/termcap.h>
++#include <ncursesw/termcap.h>
+ #else
+ #ifdef HAVE_TERMCAP_H
+ #include <termcap.h>

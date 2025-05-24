@@ -1,0 +1,20 @@
+--- gawk-5.3.1-original/Makefile.in	2024-09-17 12:42:51.000000000 -0400
++++ gawk-5.3.1-1/Makefile.in	2025-05-01 05:35:26.264826669 -0400
+@@ -279,7 +279,7 @@
+   unique=`for i in $$list; do \
+     if test -f "$$i"; then echo $$i; else echo $(srcdir)/$$i; fi; \
+   done | $(am__uniquify_input)`
+-DIST_SUBDIRS = support . extension extras doc awklib po test
++DIST_SUBDIRS = support . extension  doc awklib po test
+ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/configh.in \
+ 	$(srcdir)/gawkbug.in $(top_srcdir)/build-aux/ar-lib \
+ 	$(top_srcdir)/build-aux/compile \
+@@ -509,7 +509,7 @@
+ 
+ # Build in awklib after in doc, since we want to extract
+ # sample files if doc/gawk.texi changed.
+-SUBDIRS = support . $(am__append_1) extras doc awklib po test
++SUBDIRS = support . $(am__append_1)  doc awklib po test
+ bin_SCRIPTS = gawkbug
+ include_HEADERS = gawkapi.h
+ BUILT_SOURCES = $(srcdir)/pc/Makefile.tst

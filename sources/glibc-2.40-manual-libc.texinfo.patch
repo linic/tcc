@@ -1,0 +1,10 @@
+--- glibc-2.40-original/manual/libc.texinfo	2024-07-21 12:33:37.000000000 -0400
++++ glibc-2.40-1/manual/libc.texinfo	2025-04-30 20:31:42.464797825 -0400
+@@ -2,7 +2,6 @@
+ @comment %**start of header (This is for running Texinfo on a region.)
+ @setfilename libc.info
+ @settitle The GNU C Library
+-@documentencoding UTF-8
+ @c '@codequotebacktick on' and '@codequoteundirected on' require
+ @c Texinfo 5.0 or later, so use the older equivalent @set variables
+ @c supported in Texinfo 4.11 and later.
