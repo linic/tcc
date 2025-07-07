@@ -9,6 +9,7 @@ For more details, these posts are interesting:
 - [building core.gz from scratch](https://forum.tinycorelinux.net/index.php/topic,24244.msg178435.html#msg178435)
 - [TinyCore from SCRATCH - NADA -ZILCH - ZIP - NULL - - - THE BIG BANG!!!](https://forum.tinycorelinux.net/index.php/topic,299)
 - [cor blimey 357-byte's (Full-Source Bootstrap)](https://forum.tinycorelinux.net/index.php/topic,26272)
+
 In summary, each new tinycore release is built using the previous and replacing `vmlinuz` (aka `bzImage`) and
 `core.gz` with updated versions. What's in this repo is a way I use to recompile major "building blocks" which
 make `core.gz`. For now, I manually replace the "blocks" within `core.gz` with recompiled ones for
