@@ -2,6 +2,18 @@
 tinycore compiler - set of scripts to semi-automatically build the tinycore sources
 The scripts are based on [compile_tc16_x86](http://tinycorelinux.net/16.x/x86/release/src/toolchain/compile_tc16_x86).
 
+## This is not building or compiling from scratch
+I was initially looking to build or compile tinycore from scratch. What I found is that's not
+really the way new tinycore versions are compiled and released and that's not really what I needed.
+For more details, these posts are interesting:
+- [building core.gz from scratch](https://forum.tinycorelinux.net/index.php/topic,24244.msg178435.html#msg178435)
+- [TinyCore from SCRATCH - NADA -ZILCH - ZIP - NULL - - - THE BIG BANG!!!](https://forum.tinycorelinux.net/index.php/topic,299)
+- [cor blimey 357-byte's (Full-Source Bootstrap)](https://forum.tinycorelinux.net/index.php/topic,26272)
+In summary, each new tinycore release is built using the previous and replacing `vmlinuz` (aka `bzImage`) and
+`core.gz` with updated versions. What's in this repo is a way I use to recompile major "building blocks" which
+make `core.gz`. For now, I manually replace the "blocks" within `core.gz` with recompiled ones for
+the kernel and/or CPU I want to use. To [manually replace "blocks" within `core.gz` see this post](https://forum.tinycorelinux.net/index.php/topic,24244.msg178436.html#msg178436)
+
 ## 4.4.302-cip97
 In [scripts/common.sh](./scripts/common.sh),
 `ENABLE_KERNEL=4.4.0` is present to allow for any kernel from the 4.4.x line to work. I haven't finished
