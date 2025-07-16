@@ -116,6 +116,11 @@ I fixed that one by adding set -e and trap and removing everything in my /dev/sd
 
 # Bonus
 ## vim
-## useful to create the variables in scripts/common.sh
+### useful to create the variables in scripts/common.sh
 `%s/\<\([a-z]\+\)_/\U\1_/g` capitalize the first word before an _
 `%s/\.tar[^"]*//g` removes the `.tar*`
+
+## Terminal
+`zcat rootfs.gz | cpio -itv | awk '{print $NF}' | tree --fromfile . > rootfs_tree.txt` create a file with all the files from rootfs.gz in a tree.
+`zcat /tmp/rootfs.gz | cpio -itv | awk '{indent=length($NF)-length(gensub("/","","g",$NF)); printf("%*s%s\n", indent, "", $NF)}' > rootfs_tree.txt` same but without the tree command if it's not available.
+
