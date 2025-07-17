@@ -15,6 +15,9 @@ In summary, each new tinycore release is built using the previous and replacing 
 make `core.gz`. For now, I manually replace the "blocks" within `core.gz` with recompiled ones for
 the kernel and/or CPU I want to use. To [manually replace "blocks" within `core.gz` see this post](https://forum.tinycorelinux.net/index.php/topic,24244.msg178436.html#msg178436)
 
+## Some thoughts
+For retrocomputing with the ThinkPad 560Z and possibly other computers, I'm not sure a version of 16.x with a 4.4.302-cip97 kernel would necessarily be better. See more thoughts in this [first release here](https://github.com/linic/tcc/releases/tag/1-16.0-i686-4.4.0). For reasons detailed there, I might not pursue further the search for a 16.x TinyCore build compatible with the 4.4.302-cip97 kernel and I don't have a driving reason to continue improving the scripts here at the moment. It may help other people and I may change my mind in the future, so I'm leaving the current state here.
+
 ## 4.4.302-cip97
 In [scripts/common.sh](./scripts/common.sh),
 `ENABLE_KERNEL=4.4.0` is present to allow for any kernel from the 4.4.x line to work. I haven't finished
